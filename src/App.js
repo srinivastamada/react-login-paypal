@@ -23,9 +23,6 @@ class App extends Component {
     return (
       <div className="off-canvas-wrapper">
       <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-
-     
-
         <div className="off-canvas-content" data-off-canvas-content>
           <MobileHeader name={this.state.appName}/>
           <Header name={this.state.appName}/>

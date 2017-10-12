@@ -67,7 +67,8 @@ class Welcome extends Component {
  
 
     return (
-      <div className="row " id="Body">
+    
+      <div className="row body">
         <div className="medium-12 columns">
         <div className="medium-12 columns">
         <h2 id="welcomeText"></h2>

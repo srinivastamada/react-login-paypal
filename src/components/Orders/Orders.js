@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import FacebookLogin from 'react-facebook-login';
-import './Home.css';
+
+import './Orders.css';
 import {Redirect} from 'react-router-dom';
 import {PostData} from '../../services/PostData';
 import Title from '../Title/Title';
-import ProductsList from '../ProductsList/ProductsList';
-class Home extends Component {
+
+class Orders extends Component {
 
   constructor(props){
    super(props);
@@ -15,20 +15,20 @@ class Home extends Component {
    products:[]
    };
   
-   this.getProducts = this.getProducts.bind(this);
+   this.getOrders = this.getOrders.bind(this);
   }
 
   componentDidMount() {
     let data = JSON.parse(sessionStorage.getItem('userData'));
     console.log(data);
-    this.getProducts(data.userData);
+    this.getOrders(data.userData);
     this.setState({name: data.userData.name})
   }
 
-  getProducts(userData){
+  getOrders(userData){
    let postData = {uid: userData.uid, token:userData.token};
    console.log(postData);
-   PostData('products', postData).then((result) =>{
+   PostData('orders', postData).then((result) =>{
     let responseJson = result;
     this.setState({products: responseJson.products});
   
@@ -36,7 +36,7 @@ class Home extends Component {
   });
   }
   
-  
+
 
   render() {
 
@@ -47,10 +47,10 @@ class Home extends Component {
     return (
       <div className="row body" >
       <Title name={this.state.name}/>
-      <ProductsList productsData={this.state.products} />
+
       </div>
     );
   }
 }
 
-export default Home;
+export default Orders;
