@@ -14,11 +14,20 @@ class OrdersList extends Component {
     let productList = this
       .props
       .ordersData
-      .map(function (feedData, index) {
+      .map(function (orderData, index) {
         return (
-          <div clasName="row orderList">
-          <div className="medium-12 columns" key={index}>
-          
+          <div clasName="row orderList" key={index}>
+          <div className="medium-3 columns" >
+          {orderData.oid}
+          </div>
+          <div className="medium-3 columns" >
+          {orderData.product}
+          </div>
+          <div className="medium-3 columns" >
+          ${orderData.price}
+          </div>
+          <div className="medium-3 columns" >
+          {orderData.created}
           </div>
           </div>
          
