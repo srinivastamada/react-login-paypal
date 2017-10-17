@@ -8,6 +8,7 @@ class ProductsList extends Component {
     
   }
 
+
   render() {
     
   
@@ -18,8 +19,8 @@ class ProductsList extends Component {
         return (
           <div className="row list" key={index}>
           <div className="medium-3 columns" >
-         
           <img src={'https://demos.9lessons.info/PHP-PayPal-ExpressCheckout/img/'+productData.product_img} />
+         
           
           
           </div>
@@ -36,7 +37,7 @@ class ProductsList extends Component {
             </div>
             <div className="medium-3 columns" >
             
-           <button className="button">Order</button>
+           <button className="button" value={productData.pid} onClick={this.props.checkout}>Order</button>
              
              </div>
           </div>

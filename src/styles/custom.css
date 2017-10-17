@@ -30,16 +30,19 @@ button{
 h1,h2,h3, h4{
   font-weight: bold !important;
 }
-.right{
-    float:right;
-    
-}
+
 .list{
     margin-top:30px;
 }
-.list .columns{
+.list div{
     border-bottom:solid 1px #dedede;
     min-height: 90px;
 }
-
+.columns ul{
+    list-style: none;
+}
+.columns ul li a{
+    margin-left:10px;
+    font-weight: bold;
+}
 

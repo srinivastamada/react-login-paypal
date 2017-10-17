@@ -14,7 +14,7 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      appName: "Facebook Login with React",
+      appName: "Facebook & Google Login with React JS",
       home: false
     }
   }
