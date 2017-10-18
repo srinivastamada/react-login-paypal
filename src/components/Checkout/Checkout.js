@@ -52,7 +52,7 @@ class Checkout extends Component {
     return (
       <div className="row body" >
       <Title name={this.state.name}/>
-       <h2>Checkout</h2>
+       <h4>Checkout</h4>
        <div className='row'>
        <div className="medium-4 columns" >Product</div>
        <div className="medium-4 columns" >Name</div>
