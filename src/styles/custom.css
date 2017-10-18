@@ -40,6 +40,11 @@ h1,h2,h3, h4{
 }
 .columns ul{
     list-style: none;
+    
+}
+.right{float:right}
+.columns ul li{
+    float: left;
 }
 .columns ul li a{
     margin-left:10px;

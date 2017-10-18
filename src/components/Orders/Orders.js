@@ -4,6 +4,7 @@ import './Orders.css';
 import {Redirect} from 'react-router-dom';
 import {PostData} from '../../services/PostData';
 import Title from '../Title/Title';
+import  OrdersList from '../OrdersList/OrdersList';
 
 class Orders extends Component {
 
@@ -12,7 +13,7 @@ class Orders extends Component {
    this.state = {
    name:'',
    redirect: false,
-   products:[]
+   orders:[]
    };
   
    this.getOrders = this.getOrders.bind(this);
@@ -30,7 +31,7 @@ class Orders extends Component {
    console.log(postData);
    PostData('orders', postData).then((result) =>{
     let responseJson = result;
-    this.setState({products: responseJson.products});
+    this.setState({orders: responseJson.orders});
   
 
   });
@@ -47,7 +48,7 @@ class Orders extends Component {
     return (
       <div className="row body" >
       <Title name={this.state.name}/>
-
+      <OrdersList ordersData={this.state.orders}/>
       </div>
     );
   }

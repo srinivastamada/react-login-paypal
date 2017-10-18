@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './ProductsList.css';
+import './OrdersList.css';
 class OrdersList extends Component {
 
   constructor(props){
@@ -11,7 +11,7 @@ class OrdersList extends Component {
   render() {
     
   
-    let productList = this
+    let ordersList = this
       .props
       .ordersData
       .map(function (orderData, index) {

@@ -61,7 +61,7 @@ class Home extends Component {
     return (
       <div className="row body" >
       <Title name={this.state.name}/>
-      <PayPal/>
+     
       <ProductsList productsData={this.state.products}  checkout={this.checkout}/>
       </div>
     );

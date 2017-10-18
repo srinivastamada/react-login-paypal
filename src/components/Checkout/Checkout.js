@@ -12,7 +12,8 @@ class Checkout extends Component {
    name:'',
    redirect: false,
    pid:'',
-   product:[]
+   product:[],
+   userData:[]
    };
   
   
@@ -23,6 +24,7 @@ class Checkout extends Component {
     console.log(data);
     this.getProductData(data.userData);
     this.setState({name: data.userData.name})
+    this.setState({userData: data.userData});
   }
 
   getProductData(userData){
@@ -61,7 +63,7 @@ class Checkout extends Component {
        <div className="medium-4 columns" ><img src={'https://demos.9lessons.info/PHP-PayPal-ExpressCheckout/img/'+this.state.product.product_img} /></div>
        <div className="medium-4 columns" >{this.state.product.product}</div>
        <div className="medium-4 columns" >{this.state.product.price}
-       <PayPal />
+       <PayPal value={this.state.product.price} pid={this.state.product.pid} userData={this.state.userData}/>
        </div>
        
 

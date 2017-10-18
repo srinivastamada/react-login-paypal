@@ -26,7 +26,7 @@ class Title extends Component {
     return (
       <div className="row">
       <div className="medium-12 columns">
-      <ul><li><a href="/orders"  >Orders</a></li>
+      <ul className='right'><li><a href="/orders"  >Orders</a></li>
       <li><a href="#" onClick={this.logout} >Logout</a></li>
       </ul>
       <h1>Welcome {this.props.name}</h1>
