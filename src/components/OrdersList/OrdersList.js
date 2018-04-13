@@ -1,47 +1,24 @@
-import React, {Component} from 'react';
-import './OrdersList.css';
+import React, { Component } from "react";
+import "./OrdersList.css";
 class OrdersList extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-  
-    
   }
 
   render() {
-    
-  
-    let ordersList = this
-      .props
-      .ordersData
-      .map(function (orderData, index) {
-        return (
-          <div clasName="row orderList" key={index}>
-          <div className="medium-3 columns" >
-          {orderData.oid}
-          </div>
-          <div className="medium-3 columns" >
-          {orderData.product}
-          </div>
-          <div className="medium-3 columns" >
-          ${orderData.price}
-          </div>
-          <div className="medium-3 columns" >
-          {orderData.created}
-          </div>
-          </div>
-         
-        )
-      }, this);
+    let ordersList = this.props.ordersData.map(function(orderData, index) {
+      return (
+        <div clasName="row orderList" key={index}>
+          <div className="medium-3 columns">{orderData.oid}</div>
+          <div className="medium-3 columns">{orderData.product}</div>
+          <div className="medium-3 columns">${orderData.price}</div>
+          <div className="medium-3 columns">{orderData.created}</div>
+        </div>
+      );
+    }, this);
 
-    return (
-      <div>
-        {ordersList}
-
-      </div>
-    );
+    return <div>{ordersList}</div>;
   }
-
 }
 
 export default OrdersList;
